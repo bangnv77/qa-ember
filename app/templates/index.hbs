@@ -1,9 +1,9 @@
 <h1> Welcome to Q&amp;A! </h1>
 
 <ul class="list-group">
-  {{#each model as |question|}}
+  {{#each model.questions as |question|}}
     <li class="list-group-item">
-      {{#link-to 'question' question.id}}{{question.content}} by {{question.author}}{{/link-to}} 
+      {{#link-to 'question' question.id}}{{question.content}} by {{question.author}}{{/link-to}}
     </li>
   {{/each}}
 </ul>
