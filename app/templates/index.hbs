@@ -1,11 +1,19 @@
-<h1> Welcome to Q&amp;A! </h1>
+<div class="container-fluid indexBox">
+  <h2 class="pageTop">Questions: </h2>
 
-<ul class="list-group">
-  {{#each model.questions as |question|}}
-    <li class="list-group-item">
-      {{#link-to 'question' question.id}}{{question.content}} by {{question.author}}{{/link-to}}
-    </li>
-  {{/each}}
-</ul>
-
-{{new-question sentFromNewQuestionComponent="saveAtIndexRoute"}}
+  <div class="container questionList">
+    <div class="row">
+      {{#each model.questions as |question|}}
+        <div class="col-md-4 questionQuote">
+          <blockquote>
+            <p>{{#link-to 'question' question.id}}{{question.content}}{{/link-to}}</p>
+            <footer>{{question.author}}</footer>
+          </blockquote>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+  <div class="newQButton">
+    {{new-question sentFromNewQuestionComponent="saveAtIndexRoute"}}
+  </div>
+</div>
