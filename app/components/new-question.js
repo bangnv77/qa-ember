@@ -2,8 +2,8 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   addNewQuestion: false,
-  actions: {
-    questionFormShow() {
+  actions:{
+    questionFormShow(){
       this.set('addNewQuestion', true);
     },
 
@@ -12,14 +12,17 @@ export default Ember.Component.extend({
     },
 
     newQuestionSave1() {
+      var tagArray = this.get('tags').split(',');
       var params = {
-        author: this.get('author'),
         content: this.get('content'),
+        author: this.get('author'),
+        tags: tagArray
       };
       this.set('addNewQuestion', false);
       this.sendAction('sentFromNewQuestionComponent', params);
       this.set('content', "");
       this.set('author', "");
+      this.set('tags', "");
     }
   }
 });
