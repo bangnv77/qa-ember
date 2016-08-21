@@ -1,17 +1,23 @@
 <div class="questionBox container-fluid">
-  <h2>{{model.content}}</h2>
-  <h5>{{model.author}}</h5>
+  <h2> {{model.content}} </h2>
+
+  <h5>by {{model.author}} </h5>
+
   {{update-question question=model update="update"}}
+
   <br>
 
   <h4>Answers:</h4>
 
   <ul class="list-group">
-    {{#each model.answers as |answer|}}
-      <li class="list-group-item">
-        {{answer-tile answer=answer upVote="upVoteAnswer" downVote="downVote"}}
-      </li>
-    {{/each}}
+  {{#each model.answers as |answer|}}
+    <li class="list-group-item">
+      <blockquote>
+        <p>{{answer.content}}</p>
+        <footer>{{answer.author}}</footer>
+      </blockquote>
+    </li>
+  {{/each}}
   </ul>
 
   {{new-answer saveAnswer2="save3" question=model}}
