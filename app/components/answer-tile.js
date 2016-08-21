@@ -4,7 +4,11 @@ export default Ember.Component.extend({
   actions: {
     upVote(answer) {
       this.sendAction('upVote', answer);
-      // console.log(answer);
+    },
+
+    downVote(answer) {
+      this.sendAction('downVote', answer);
     }
   }
+
 });
