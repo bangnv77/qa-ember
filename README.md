@@ -1,7 +1,26 @@
-# Qa-ember
+# Questions-and-answers
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Questions and Answers is a simple message board app created in Ember JS. The app allows a user to submit a question, add tags to their question, and receive responses from other users. It uses Firebase and Ember data to implement relational data storage.
+
+## Project Objectives
+
+* Data is stored in and retrieved from Ember Data models and Firebase.
+
+* Components are used to create display and behavior for your templates.
+
+* One-to-many relationship exists between Question and Answers.
+
+## Technologies used:
+
+* Ember
+* Node
+* Bower
+* Sass
+* Firebase
+* Bootstrap
+* Javascript
+* HTML
+* CSS
 
 ## Prerequisites
 
@@ -39,9 +58,6 @@ Make use of the many generators for code, try `ember help generate` for more det
 * `ember build` (development)
 * `ember build --environment production` (production)
 
-### Deploying
-
-Specify what it takes to deploy your app.
 
 ## Further Reading / Useful Links
 
@@ -51,3 +67,8 @@ Specify what it takes to deploy your app.
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
 
+## License
+
+This software is licensed under the MIT license.
+
+Copyright (c) 2016 Copy

@@ -12,9 +12,11 @@ export default Ember.Component.extend({
     },
 
     update(question) {
+      var tagArray = this.get('tags').split(',');
       var params = {
         author: this.get('author'),
-        content: this.get('content')
+        content: this.get('content'),
+        tags: tagArray
       };
       this.set('updateQuestionForm', false);
       this.sendAction('update', question, params);
